@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - JavaScript Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Assignment 5: JavaScript Basics</h1>
+
+        <!-- Task 1: Browser Game -->
+        <section class="task-section">
+            <h2>Task 1: Higher or Lower Game</h2>
+            <div class="game-box">
+                <p>Lives: <span id="lives">3</span></p>
+                <p>Streak: <span id="streak">0</span> | Best Streak: <span id="best-streak">0</span></p>
+                <p class="number-display">Current Number: <span id="current-number">0</span></p>
+                <div class="game-controls">
+                    <button id="higher-btn">Higher</button>
+                    <button id="lower-btn">Lower</button>
+                </div>
+                <p id="message" class="message"></p>
+                <button id="restart-btn" style="display: none;">Restart Game</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Task 2: Kanban Board -->
+        <section class="task-section">
+            <h2>Task 2: Kanban Board</h2>
+            <div id="kanban-board" class="kanban-container"></div>
+        </section>
+
+        <hr>
+
+        <!-- Task 3: Ticket Builder Form -->
+        <section class="task-section">
+            <h2>Task 3: Ticket Builder Form</h2>
+            <div class="form-wrapper">
+                <form id="ticket-form" novalidate>
+                    <div class="form-group">
+                        <label for="event">Event Name</label>
+                        <input type="text" id="event" required>
+                        <span id="event-error" class="error-text"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Event Date</label>
+                        <input type="date" id="date" required>
+                        <span id="date-error" class="error-text"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity (1-5)</label>
+                        <input type="number" id="quantity" min="1" max="5" required>
+                        <span id="quantity-error" class="error-text"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                        <span id="email-error" class="error-text"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="promo">Promo Code (Optional)</label>
+                        <input type="text" id="promo">
+                        <span id="promo-error" class="error-text"></span>
+                    </div>
+
+                    <div id="error-summary" class="error-summary"></div>
+                    <button type="submit">Submit Ticket</button>
+                </form>
+
+                <div class="preview-panel">
+                    <h3>Ticket Preview</h3>
+                    <p>Event: <span id="preview-event">-</span></p>
+                    <p>Date: <span id="preview-date">-</span></p>
+                    <p>Quantity: <span id="preview-qty">0</span></p>
+                    <p>Total Price: $<span id="preview-total">0</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="task1.js" defer></script>
+    <script src="task2.js" defer></script>
+    <script src="task3.js" defer></script>
+</body>
+</html>
